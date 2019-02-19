@@ -1,0 +1,17 @@
+
+.container {
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-wrapper {
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+}
+
+.image {
+  position: absolute;
+
+}

@@ -1,0 +1,31 @@
+<h2>
+  select component size
+  <span [style.width.px]="200" fxLayout="row" fxLayoutAlign="space-between">
+    <button (click)="resetComponentSize(200)">200</button>
+    <button (click)="resetComponentSize(300)">300</button>
+    <button (click)="resetComponentSize(1000)">1000</button>
+    <button (click)="resetComponentSize(7000)">7000</button>
+  </span>
+</h2>
+<h2>
+  crop original image
+  <button (click)="cropImage()">><</button>
+</h2>
+<h2>remove optimal instance
+  <button (click)="removeOptimalInstance()">X</button>
+</h2>
+<br>
+<div class="container"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  [style.width.px]="optimalSize"
+  [style.height.px]="optimalSize">
+  <div class="image-wrapper"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    [ngStyle]="imageWrapperStyle">
+    <img class="image" #imageTag
+      [src]="optimalImage?.url || image.url"
+      [ngStyle]="imageStyle">
+  </div>
+</div>
